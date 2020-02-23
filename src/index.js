@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import RegisterFormContainer from "./App";
-import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 
 import { createStore, combineReducers } from "redux";
@@ -23,5 +22,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
-
-serviceWorker.unregister();
