@@ -6,8 +6,16 @@ class RegisterFormContainer extends Component {
     // window.alert(JSON.stringify(values, null, 4));
     console.log(JSON.stringify(values, null, 4));
   };
+
+  getInitialValues  = () => {
+    retunr {
+      preference:
+    }
+  }
   render() {
-    return <RegisterForm onSubmit={this.submit} />;
+    return (
+      <RegisterForm onSubmit={this.submit} initialValues={this.getInitialValues()} />
+    );
   }
 }
 

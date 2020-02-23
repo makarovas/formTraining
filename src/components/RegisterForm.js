@@ -9,10 +9,16 @@ class RegisterForm extends Component {
       <form onSubmit={handleSubmit}>
         <Field name="name" label="Name" component={customInput} type="text" />
         <Field
-          name="formatting "
+          name="preference "
           label="Formatting"
           component={customSelect}
           type="text"
+        />
+        <Field
+          name="newsletter "
+          label="Sign up"
+          component={customInput}
+          type="checkbox"
         />
 
         <button type="submit">Submit</button>
