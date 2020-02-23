@@ -13,8 +13,7 @@ export const customSelect = ({ label, input, type, ...props }) => {
   return (
     <div>
       <label>{label}</label>
-      <select {...props} {...input} type={type}>
-        <option />
+      <select {...input} {...props} type={type}>
         <option value="tabs">Tabs</option>
         <option value="spaces">Spaces</option>
       </select>
