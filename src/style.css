@@ -1,0 +1,36 @@
+input:not([type="checkbox"]),
+button[type="submit"] {
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: orange;
+  color: white;
+}
+
+.valid input {
+  border-color: green;
+}
+
+.invalid input {
+  border-color: red;
+}
+
+.error-text {
+  background-color: red;
+  color: white;
+  margin-top: 10px;
+  position: relative;
+}
+
+.error-text::before {
+  content: "";
+  border-color: transparent transparent red transparent;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 7px;
+  position: absolute;
+  left: 20px;
+  top: -8px;
+}

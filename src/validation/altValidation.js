@@ -5,3 +5,8 @@ export const minLength = value =>
 
 export const maxLength = value =>
   value.length > 10 ? "value is to long " : undefined;
+
+export const matchesPassword = (value, allValues) =>
+  value === allValues.password
+    ? undefined
+    : "Password should be matched, please retype";
