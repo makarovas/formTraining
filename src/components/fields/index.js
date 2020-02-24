@@ -3,9 +3,14 @@ import ReactJson from "react-json-view";
 import cx from "classnames";
 
 const getValidityClassName = meta => {
+  if (meta.asyncValidate) {
+    return "async-validating";
+  }
+
   if (meta.active) {
     return;
   }
+
   if (meta.touched && meta.invalid) {
     return "invalid";
   }

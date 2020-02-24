@@ -7,7 +7,8 @@ import {
   required,
   minLength,
   maxLength,
-  matchesPassword
+  matchesPassword,
+  asyncValidate
 } from "../validation/altValidation";
 
 class RegisterForm extends Component {
@@ -71,7 +72,9 @@ class RegisterForm extends Component {
 
 RegisterForm = reduxForm({
   form: "register",
-  validate
+  validate,
+  asyncValidate,
+  asyncBlurFields: ["username"]
 })(RegisterForm);
 
 export default RegisterForm;
