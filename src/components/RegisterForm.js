@@ -21,6 +21,12 @@ class RegisterForm extends Component {
           type="text"
         />
         <Field
+          name="username"
+          label="Username"
+          component={customInput}
+          type="text"
+        />
+        <Field
           name="preference"
           label="Formatting"
           component={customSelect}

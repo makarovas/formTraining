@@ -1,17 +1,17 @@
-export const validate = values => {
+export const validate = ({ firstName, secondName, username }) => {
   let errors = {};
-  if (!values.firstName) {
+  if (!firstName) {
     errors.firstName = "First name is required!";
   }
-  if (!values.secondName) {
+  if (!secondName) {
     errors.secondName = "Second name is required!";
   }
 
-  if (!values.username) {
+  if (!username) {
     errors.username = "username is required!";
-  } else if (values.username.length < 4) {
+  } else if (username.length < 4) {
     errors.username = "Username must be at least 4 characters long";
-  } else if (values.username.length > 10) errors.username = "WOW WOW STOP";
+  } else if (username.length > 10) errors.username = "WOW WOW STOP";
 
   return errors;
 };
