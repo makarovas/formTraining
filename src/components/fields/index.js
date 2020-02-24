@@ -1,24 +1,27 @@
 import React from "react";
 import ReactJson from "react-json-view";
 
-export const customInput = ({ label, input, type, ...props }) => {
+export const customInput = props => {
+  const { label, input, type, meta } = props;
   return (
     <div>
       <label>{label}</label>
       <input {...input} type={type} />
-      <ReactJson src={props} />
+      {meta.error && <div style={{ color: "red" }}>{meta.error}</div>}
+      {/* <ReactJson src={props} /> */}
     </div>
   );
 };
 
-export const customSelect = ({ label, input, type, ...props }) => {
+export const customSelect = props => {
   return (
     <div>
-      <label>{label}</label>
-      <select {...input} {...props} type={type}>
+      <label>{props.label}</label>
+      <select {...props.input} type={props.type}>
         <option value="tabs">Tabs</option>
         <option value="spaces">Spaces</option>
       </select>
+      <ReactJson src={props} />
     </div>
   );
 };
