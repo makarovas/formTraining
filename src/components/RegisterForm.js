@@ -3,6 +3,8 @@ import { Field, reduxForm } from "redux-form";
 import { customInput, customSelect } from "./fields/index";
 import { validate } from "../validation";
 // import "./style.css";
+import capitalize from "capitalize";
+
 import {
   required,
   minLength,
@@ -22,6 +24,7 @@ class RegisterForm extends Component {
           component={customInput}
           type="text"
           // validate={[required]}
+          normalize={capitalize}
         />
         <Field
           name="secondName"
@@ -29,6 +32,7 @@ class RegisterForm extends Component {
           component={customInput}
           type="text"
           // validate={[required]}
+          normalize={capitalize}
         />
         <Field
           name="username"
